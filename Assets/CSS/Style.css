@@ -1,0 +1,459 @@
+/* Estilos Globais */
+/* =============== */
+
+/* Define o modelo de caixa para todos os elementos, zera margens e preenchimentos, e define a fonte */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Estilos do Corpo da Página */
+/* =========================== */
+
+/* Define o plano de fundo com gradiente linear e centraliza o conteúdo verticalmente */
+body {
+    background: linear-gradient(to right, #d4d3dd, #efefbb);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para Cabeçalho */
+/* ======================= */
+
+/* Cabeçalho fixo na parte superior, com fundo preto semi-transparente e texto branco */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Estilos de Navegação */
+/* ===================== */
+
+/* Estilização da barra de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+/* Estilização dos itens da navegação */
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+/* Estilização dos links de navegação */
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Estilos da Caixa de Busca */
+/* ========================== */
+
+/* Container da caixa de busca */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Container da entrada de busca */
+.search-form .search-input-container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #5ac1e7;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+/* Texto de placeholder da entrada de busca */
+.search-form .search-input-placeholder {
+    top: 50%;
+    padding: 3px;
+    font-size: 16px;
+    line-height: 21px;
+    color: #b7b7b7;
+}
+
+/* Estilos da entrada de busca */
+.search-form .search-input {
+    flex: 1;
+    padding: 9px 0;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #e3ee4a;
+    border: none;
+    background: transparent;
+}
+
+/* Oculta o texto de placeholder quando a entrada de busca está em foco */
+.search-form .search-input:focus + .search-input-placeholder {
+    display: none;
+}
+
+/* Estilos do botão de busca */
+.search-form .search-button {
+    color: #5ac1e7;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid #5ac1e7;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilização do botão de busca no hover */
+.search-form .search-button:hover {
+    background-color: #14b3db;
+    color: #f3f3f3;
+}
+
+/* Estilos do Conteúdo Principal */
+/* ============================== */
+
+/* Adiciona um espaçamento no topo para compensar a altura do cabeçalho fixo */
+.conteudo-principal {
+    padding-top: 70px; /* Ajuste este valor para corresponder à altura do cabeçalho */
+}
+
+
+/* Estilos do Icone do Filtro */
+/* ============================== */
+  /* Estilos do funçao filtrar */
+   
+  .container-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .icon-filter {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    margin-bottom: 20px; /* Margem inferior */
+  }
+  
+  .icon-filter-img {
+    width: 30px; /* Largura do ícone */
+    height: auto;
+  }
+ 
+/* Container Filters */
+.container-filters {
+    display: flex;
+    justify-content: center;
+  
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 250px;
+  
+    color: #555;
+    background-color: #f2f2f2;
+    height: 100%;
+    padding-top: 140px;
+    transition: all 0.3s linear;
+  }
+  
+  .container-filters.active {
+    left: 0;
+  }
+  
+  .filter-by-type {
+    display: flex;
+    flex-direction: column;
+  
+    gap: 20px;
+  }
+  
+  .filter-by-type span {
+    font-weight: 700;
+    font-size: 22px;
+  }
+  
+  .group-type {
+    display: flex;
+    gap: 10px;
+  
+    margin-left: 15px;
+  }
+  
+  .group-type label {
+    cursor: pointer;
+  }
+
+
+/* Estilos do suspenso */
+/* ============================== */
+/* Estilos para o menu suspenso */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #45453A;
+    min-width: 120px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
+    border-radius: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+/* Estilos do Container de Pokémons */
+/* ================================= */
+
+/* Container dos Pokémons */
+.pokeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Estilos de cada Pokémon */
+.pokemon {
+    background-color: #eee;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Container da imagem do Pokémon */
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+/* Estilos da imagem do Pokémon */
+.imgContainer img {
+    max-width: 90%;
+}
+
+/* Estilos das informações do Pokémon */
+.info {
+    margin-top: 20px;
+}
+
+/* Estilos do número do Pokémon */
+.number {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 2px 13px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+/* Estilos do nome do Pokémon */
+.name {
+    margin: 15px 0 7px;
+    letter-spacing: 1.5px;
+}
+
+
+
+
+
+/* Estilos do para o Rodape */
+/* ================================= */
+/* Estilos do Rodape */
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: rgba(25, 25, 25);
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+main {
+    height: 80vh;
+}
+
+footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+}
+
+#footer_logo img {
+    width: 230px; /* Ajuste a largura conforme necessário */
+    height: auto; /* Isso garante que a proporção da imagem seja mantida */
+}
+
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer_content {
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #7f37c9;
+}
+
+#footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer_subscribe p {
+    color: var(--color-neutral-30);
+}
+
+#input_group {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+}
+
+#input_group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input_group button {
+    background-color: #7f37c9;
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#input_group button:hover {
+    opacity: 0.8;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+/*Responsividade do Rodape*/
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .rodape-div-1, .rodape-div-2, .rodape-div-3{
+        width: calc(50% - 20px);
+        padding: 10px;
+    }
+    .rodape-div{
+        padding: 60px 0px 40px 0px;
+    }
+}
+
+/*Responsividade do Cabeçalho*/
+@media screen and (max-width: 768px) {
+    /* Ajuste o estilo do cabeçalho conforme necessário para telas menores que 768px */
+    header {
+        padding: 5px 0; /* Reduza o preenchimento do cabeçalho */
+    }
+    
+    .search-container {
+        flex-direction: column; /* Altere a direção do flexbox para coluna */
+        align-items: center; /* Centralize os itens na coluna */
+    }
+    
+    .search-form .search-input-container {
+        margin-top: 10px; /* Adicione uma margem no topo */
+    }
+    
+    nav ul {
+        flex-direction: column; /* Altere a direção do flexbox para coluna */
+        text-align: center; /* Centralize o texto */
+    }
+    
+    nav ul li {
+        margin: 10px 0; /* Adicione margem entre os itens */
+    }
+  }
+  

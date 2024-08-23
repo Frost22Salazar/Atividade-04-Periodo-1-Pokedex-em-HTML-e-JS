@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Assets/CSS/style.css">
+  <title>Pokedex</title>
+</head>
+
+<body>
+  <header>
+    <div class="search-container">
+      <form class="search-form">
+        <div class="search-input-container">
+          <input type="text" id="search-input" class="search-input" placeholder="Qual o Nome do Poke">
+          <button type="button" id="search-button" class="search-button">Buscar</button>
+        </div>
+      </form>
+      <nav>
+        <ul>
+          <li><a href="Index.html">Início</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Geração</a>
+            <div class="dropdown-content"></div>
+          </li>
+          <li><a href="Perfil.html">Login/Cadastrar-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="conteudo-principal">
+
+    <div class="container-filters">
+      <div class="filter-by-type">
+        <span>Tipo</span>
+
+        <div class="group-type">
+          <input type="checkbox" name="normal" id="normal" />
+          <label for="normal">Normal</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="fire" id="fire" />
+          <label for="fire">Fire</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="water" id="water" />
+          <label for="water">Water</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="electric" id="electric" />
+          <label for="electric">Electric</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="grass" id="grass" />
+          <label for="grass">Grass</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="ice" id="ice" />
+          <label for="ice">Ice</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="fighting" id="fighting" />
+          <label for="fighting">Fighting</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="poison" id="poison" />
+          <label for="poison">Poison</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="ground" id="ground" />
+          <label for="ground">Ground</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="flying" id="flying" />
+          <label for="flying">Flying</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="psychic" id="psychic" />
+          <label for="psychic">Psychic</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="bug" id="bug" />
+          <label for="bug">Bug</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="rock" id="rock" />
+          <label for="rock">Rock</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="ghost" id="ghost" />
+          <label for="ghost">Ghost</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="dragon" id="dragon" />
+          <label for="dragon">Dragon</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="dark" id="dark" />
+          <label for="dark">Dark</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="steel" id="steel" />
+          <label for="steel">Steel</label>
+        </div>
+        <div class="group-type">
+          <input type="checkbox" name="fairy" id="fairy" />
+          <label for="fairy">Fairy</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-filter ">
+      <img src="Assets/img/filtro.png" alt="Ícone" class="icon-filter-img">
+      <h1>Pokedex</h1>
+    </div>
+
+    <div class="pokeContainer" id="pokeContainer"></div>
+    <!--nao delete essa linha é a responsavel gerar os cards pokemon-->
+  </div>
+
+  <footer>
+    <div id="footer_content">
+      <div id="footer_logo">
+        <img src="Assets/img/Logo.png" alt="Logo">
+      </div>
+
+      <ul class="footer-list">
+        <li>
+          <h3>Alunos</h3>
+        </li>
+        <li>
+          <a href="" class="footer-link">Tales</a>
+        </li>
+        <li>
+          <a href="" class="footer-link">Leonardo</a>
+        </li>
+        <li>
+          <a href="" class="footer-link">Henrique</a>
+        </li>
+      </ul>
+
+      <ul class="footer-list">
+        <li>
+          <h3>Navegue</h3>
+        </li>
+        <li>
+          <a href="" class="footer-link">Início</a>
+        </li>
+        <li>
+          <a href="" class="footer-link">Perfil</a>
+        </li>
+      </ul>
+
+      <ul class="footer-list">
+        <li>
+          <h3>Contatos</h3>
+        </li>
+        <li>
+          <a href="" class="footer-link">+55 00 90000-0000</a>
+        </li>
+        <li>
+          <a href="" class="footer-link">IrineuVcNaoSabeNemEu@Email.edu.br</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="footer_copyright">
+      &#169
+      9000 all rights reserved
+    </div>
+  </footer>
+
+  <script src="Assets/Java/Script.js"></script>
+  <!--nao delete essa linha é a responsavel pelas funçoes-->
+</body>
+
+</html>
